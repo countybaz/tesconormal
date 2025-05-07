@@ -15,7 +15,7 @@ const Step1 = () => {
 
   const handleNext = () => {
     if (selected) {
-      setAnswer("us_resident", selected);
+      setAnswer("uk_resident", selected);
       
       if (selected === "no") {
         // Redirect to the standalone rejection page
@@ -34,8 +34,8 @@ const Step1 = () => {
       />
       
       <div className="mb-6">
-        <h2 className="text-lg font-medium mb-4">Do you live in the United States?</h2>
-        <p className="text-sm text-gray-600 mb-4">We are looking for participants from the US only</p>
+        <h2 className="text-lg font-medium mb-4">Do you live in the United Kingdom?</h2>
+        <p className="text-sm text-gray-600 mb-4">We are looking for participants from the UK only</p>
         <div className="space-y-3">
           <SurveyOption 
             label="Yes" 
@@ -53,7 +53,7 @@ const Step1 = () => {
       <Button 
         onClick={handleNext} 
         disabled={!selected}
-        className={`w-full py-5 text-lg bg-blue-600 hover:bg-blue-700 shadow-lg ${isMobile ? 'fixed bottom-4 left-0 right-0 max-w-xs mx-auto z-10' : ''}`}
+        className={`w-full py-5 text-lg bg-orange-600 hover:bg-orange-700 shadow-lg fixed bottom-4 left-0 right-0 max-w-xs mx-auto z-20 md:static md:max-w-md`}
       >
         Continue
       </Button>

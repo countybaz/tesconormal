@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 text-center">
+    <div className="min-h-screen bg-gradient-to-b from-orange-50 to-orange-100 text-center">
       <SurveyProvider>
         <header className="shadow-sm py-2 bg-white h-24 flex items-center">
           <div className="container mx-auto px-4 flex items-center justify-center">
@@ -21,13 +21,13 @@ const Index = () => {
 
       <footer className="bg-white border-t mt-12">
         <div className="container mx-auto px-4 py-6 text-center">
-          {/* Legal Links Section - Header stands out, links are Apple-style */}
+          {/* Legal Links Section */}
           <div className="mb-6">
             <h3 className="font-semibold mb-3 text-gray-800 bg-gray-100 inline-block px-4 py-2 rounded-md">Legal Links</h3>
             <div className="flex flex-wrap justify-center gap-4 text-sm">
-              <Link to="/terms" className="text-blue-600 hover:underline">Terms and Conditions</Link>
-              <Link to="/privacy" className="text-blue-600 hover:underline">Privacy Policy</Link>
-              <Link to="/non-affiliation" className="text-blue-600 hover:underline">Non-Affiliation Disclaimer</Link>
+              <Link to="/terms" className="text-orange-600 hover:underline">Terms and Conditions</Link>
+              <Link to="/privacy" className="text-orange-600 hover:underline">Privacy Policy</Link>
+              <Link to="/non-affiliation" className="text-orange-600 hover:underline">Non-Affiliation Disclaimer</Link>
             </div>
           </div>
           
@@ -40,7 +40,7 @@ const Index = () => {
           
           {/* Copyright */}
           <p className="text-xs text-center text-gray-500 mt-6">
-            © {new Date().getFullYear()} Ultimate Phone Program. All rights reserved.
+            © {new Date().getFullYear()} Sainsbury's Review Program. All rights reserved.
             <br />
             This is a limited time promotional offer. Terms and conditions apply.
           </p>
@@ -64,11 +64,15 @@ const HeaderContent = () => {
       onClick={handleLogoClick}
     >
       <img 
-        src="/lovable-uploads/8c90f432-da05-45a1-81f7-cdbbce1ef2e2.png" 
-        alt="Ultimate Phone Program Logo" 
+        src="/lovable-uploads/cbdedd35-0ec9-4e16-8866-51e309907ad3.png" 
+        alt="Sainsbury's Review Program Logo" 
         className="h-20 md:h-24 mr-4"
+        width="100"
+        height="100"
+        loading="eager"
+        fetchPriority="high"
       />
-      <h1 className="text-xl font-bold text-blue-600">Ultimate Phone Program</h1>
+      <h1 className="text-xl font-bold text-orange-600">Sainsbury's Review Program</h1>
       <div className="ml-4">
         <FAQ />
       </div>

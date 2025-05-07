@@ -13,7 +13,7 @@ const Step2 = () => {
 
   const handleNext = () => {
     if (selected) {
-      setAnswer("tech_importance", selected);
+      setAnswer("shopping_frequency", selected);
       goToNextStep();
     }
   };
@@ -26,22 +26,22 @@ const Step2 = () => {
       />
       
       <div className="mb-6">
-        <h2 className="text-lg font-medium mb-4">How important is it for you to keep your gadgets up to date?</h2>
+        <h2 className="text-lg font-medium mb-4">How often do you shop at Sainsbury's?</h2>
         <div className="space-y-3">
           <SurveyOption 
-            label="Very important" 
-            selected={selected === "very_important"} 
-            onClick={() => setSelected("very_important")}
+            label="Weekly or more often" 
+            selected={selected === "weekly_or_more"} 
+            onClick={() => setSelected("weekly_or_more")}
           />
           <SurveyOption 
-            label="Somewhat important" 
-            selected={selected === "somewhat_important"} 
-            onClick={() => setSelected("somewhat_important")}
+            label="Monthly" 
+            selected={selected === "monthly"} 
+            onClick={() => setSelected("monthly")}
           />
           <SurveyOption 
-            label="Not important at all" 
-            selected={selected === "not_important"} 
-            onClick={() => setSelected("not_important")}
+            label="Rarely or never" 
+            selected={selected === "rarely"} 
+            onClick={() => setSelected("rarely")}
           />
         </div>
       </div>
@@ -49,7 +49,7 @@ const Step2 = () => {
       <Button 
         onClick={handleNext} 
         disabled={!selected}
-        className={`w-full py-5 text-lg bg-blue-600 hover:bg-blue-700 shadow-lg ${isMobile ? 'fixed bottom-4 left-0 right-0 max-w-xs mx-auto z-10' : ''}`}
+        className={`w-full py-5 text-lg bg-orange-600 hover:bg-orange-700 shadow-lg fixed bottom-4 left-0 right-0 max-w-xs mx-auto z-20 md:static md:max-w-md`}
       >
         Continue
       </Button>

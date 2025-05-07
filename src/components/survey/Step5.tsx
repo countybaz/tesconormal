@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import SurveyHeader from "@/components/SurveyHeader";
 import { useSurvey } from "@/contexts/SurveyContext";
 import { Check } from "lucide-react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const Step5 = () => {
   const { goToNextStep } = useSurvey();
@@ -14,6 +15,7 @@ const Step5 = () => {
     reserved: false
   });
   const [isProcessing, setIsProcessing] = useState(true);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const timers = [
@@ -79,7 +81,7 @@ const Step5 = () => {
 
       <div className="w-full bg-gray-100 rounded-md h-2 mt-6">
         <div 
-          className={`bg-blue-600 h-2 rounded-md ${isProcessing ? 'animate-pulse' : ''}`}
+          className={`bg-orange-600 h-2 rounded-md ${isProcessing ? 'animate-pulse' : ''}`}
           style={{ width: isProcessing ? undefined : '100%' }}
         ></div>
       </div>
@@ -91,7 +93,7 @@ const Step5 = () => {
       {/* Add a continue button that's clearly visible */}
       <Button 
         onClick={goToNextStep} 
-        className={`w-full py-5 text-lg bg-green-600 hover:bg-green-700 shadow-lg fixed bottom-4 left-0 right-0 max-w-xs mx-auto md:static md:max-w-md transition-opacity ${isProcessing ? 'opacity-0' : 'opacity-100'}`}
+        className={`w-full py-5 text-lg bg-green-600 hover:bg-green-700 shadow-lg fixed bottom-4 left-0 right-0 max-w-xs mx-auto z-20 md:static md:max-w-md transition-opacity ${isProcessing ? 'opacity-0' : 'opacity-100'}`}
         disabled={isProcessing}
       >
         Continue to Your Reward

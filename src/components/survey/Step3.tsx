@@ -13,7 +13,7 @@ const Step3 = () => {
 
   const handleNext = () => {
     if (selected) {
-      setAnswer("upgrade_frequency", selected);
+      setAnswer("feedback_preference", selected);
       goToNextStep();
     }
   };
@@ -26,22 +26,22 @@ const Step3 = () => {
       />
       
       <div className="mb-6">
-        <h2 className="text-lg font-medium mb-4">How often do you upgrade your tech devices?</h2>
+        <h2 className="text-lg font-medium mb-4">What would you like to review about Sainsbury's?</h2>
         <div className="space-y-3">
           <SurveyOption 
-            label="Every year" 
-            selected={selected === "every_year"} 
-            onClick={() => setSelected("every_year")}
+            label="Shopping experience" 
+            selected={selected === "shopping_experience"} 
+            onClick={() => setSelected("shopping_experience")}
           />
           <SurveyOption 
-            label="Every few years" 
-            selected={selected === "every_few_years"} 
-            onClick={() => setSelected("every_few_years")}
+            label="Product quality" 
+            selected={selected === "product_quality"} 
+            onClick={() => setSelected("product_quality")}
           />
           <SurveyOption 
-            label="Never upgrade" 
-            selected={selected === "never"} 
-            onClick={() => setSelected("never")}
+            label="Customer service" 
+            selected={selected === "customer_service"} 
+            onClick={() => setSelected("customer_service")}
           />
         </div>
       </div>
@@ -49,7 +49,7 @@ const Step3 = () => {
       <Button 
         onClick={handleNext} 
         disabled={!selected}
-        className={`w-full py-5 text-lg bg-blue-600 hover:bg-blue-700 shadow-lg ${isMobile ? 'fixed bottom-4 left-0 right-0 max-w-xs mx-auto z-10' : ''}`}
+        className={`w-full py-5 text-lg bg-orange-600 hover:bg-orange-700 shadow-lg fixed bottom-4 left-0 right-0 max-w-xs mx-auto z-20 md:static md:max-w-md`}
       >
         Continue
       </Button>

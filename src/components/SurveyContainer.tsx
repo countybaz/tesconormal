@@ -11,9 +11,11 @@ import Results from "@/components/survey/Results";
 import RejectionPage from "@/components/survey/RejectionPage";
 import Timer from "@/components/Timer";
 import FacebookReviews from "@/components/FacebookReviews";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const SurveyContainer = () => {
   const { currentStep, totalSteps } = useSurvey();
+  const isMobile = useIsMobile();
 
   // Scroll to top when step changes
   useEffect(() => {
@@ -41,6 +43,9 @@ const SurveyContainer = () => {
       
       {/* Facebook Reviews - shown in all steps except start screen and rejection page */}
       {currentStep !== 0 && currentStep !== 6 && <FacebookReviews />}
+      
+      {/* Add padding at the bottom for mobile fixed buttons */}
+      {isMobile && <div className="h-24"></div>}
     </div>
   );
 };

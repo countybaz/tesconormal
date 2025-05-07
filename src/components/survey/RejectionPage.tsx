@@ -20,11 +20,15 @@ const RejectionPage = () => {
     <div className="max-w-md mx-auto">
       <div className="flex items-center justify-center cursor-pointer mb-6" onClick={handleLogoClick}>
         <img 
-          src="/lovable-uploads/8c90f432-da05-45a1-81f7-cdbbce1ef2e2.png" 
-          alt="Ultimate Phone Program Logo" 
+          src="/lovable-uploads/cbdedd35-0ec9-4e16-8866-51e309907ad3.png" 
+          alt="Sainsbury's Review Program Logo" 
           className="h-16 mr-4"
+          width="64"
+          height="64"
+          loading="eager"
+          fetchPriority="high"
         />
-        <h1 className="text-xl font-bold text-blue-600">Ultimate Phone Program</h1>
+        <h1 className="text-xl font-bold text-orange-600">Sainsbury's Review Program</h1>
         <div className="ml-4">
           <FAQ />
         </div>
@@ -43,7 +47,7 @@ const RejectionPage = () => {
 
       <Button 
         onClick={handleTryAgain} 
-        className="w-full bg-blue-600 hover:bg-blue-700 text-lg py-6"
+        className="w-full bg-orange-600 hover:bg-orange-700 text-lg py-6"
       >
         Try Again <RefreshCw className="ml-2" size={20} />
       </Button>
