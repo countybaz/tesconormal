@@ -77,14 +77,14 @@ const ProductOffer = ({ onClaim }: ProductOfferProps) => {
       </div>
 
       <div className="mb-6 text-center">
-        <p className="text-orange-600 font-medium text-sm mt-1">+ FREE Shipping</p>
+        <p className="text-orange-600 font-medium text-sm mt-1">Limited Time Offer</p>
       </div>
 
       <Button 
         onClick={onClaim} 
-        className={`w-full py-6 text-lg bg-green-600 hover:bg-green-700 shadow-md fixed bottom-4 left-0 right-0 max-w-xs mx-auto z-20 md:static md:max-w-md md:mt-6 border-2 border-green-700`}
+        className={`w-full py-6 text-lg bg-green-600 hover:bg-green-700 shadow-md fixed bottom-4 left-0 right-0 max-w-xs mx-auto z-20 md:static md:max-w-md md:mt-6 border-2 border-green-700 ${isMobile ? 'h-16 text-xl' : ''}`}
       >
-        CLAIM NOW
+        APPLY NOW
       </Button>
 
       <p className="text-xs text-center text-gray-500 mt-4">

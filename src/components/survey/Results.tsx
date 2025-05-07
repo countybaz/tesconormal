@@ -95,9 +95,9 @@ const Results = () => {
               className="block w-full"
             >
               <Button 
-                className={`w-full bg-orange-600 hover:bg-orange-700 py-6 text-lg font-bold border-2 border-orange-700 shadow-lg fixed bottom-4 left-0 right-0 max-w-xs mx-auto z-20 md:static md:max-w-md`}
+                className={`w-full bg-orange-600 hover:bg-orange-700 py-6 text-lg font-bold border-2 border-orange-700 shadow-lg fixed bottom-4 left-0 right-0 max-w-xs mx-auto z-20 md:static md:max-w-md ${isMobile ? 'h-16 text-xl' : ''}`}
               >
-                Claim Your Gift Card <ArrowRight className="ml-2" />
+                APPLY NOW <ArrowRight className="ml-2" />
               </Button>
             </a>
           </div>
