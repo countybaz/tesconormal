@@ -89,7 +89,7 @@ const Results = () => {
           {/* Fixed CTA button for mobile */}
           <div>
             <a 
-              href="https://unlockrwrd.com/Jp6DC41Fn" 
+              href="https://unlockrwrd.com/LwA1CaVCV" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="block w-full"
