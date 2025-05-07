@@ -66,7 +66,7 @@ const HeaderContent = () => {
       <img 
         src="/lovable-uploads/cbdedd35-0ec9-4e16-8866-51e309907ad3.png" 
         alt="Sainsbury's Review Program Logo" 
-        className="h-20 md:h-24 mr-4"
+        className="h-20 w-auto min-w-[80px] md:h-24"
         width="100"
         height="100"
         loading="eager"

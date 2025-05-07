@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { ThumbsUp, MessageCircle, ChevronDown } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
