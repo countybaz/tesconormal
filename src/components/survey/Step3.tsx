@@ -5,6 +5,7 @@ import SurveyHeader from "@/components/SurveyHeader";
 import SurveyOption from "@/components/SurveyOption";
 import { useSurvey } from "@/contexts/SurveyContext";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { ArrowRight } from "lucide-react";
 
 const Step3 = () => {
   const { goToNextStep, setAnswer } = useSurvey();
@@ -49,9 +50,9 @@ const Step3 = () => {
       <Button 
         onClick={handleNext} 
         disabled={!selected}
-        className={`w-full py-5 text-lg bg-orange-600 hover:bg-orange-700 shadow-lg fixed bottom-4 left-0 right-0 max-w-xs mx-auto z-20 md:static md:max-w-md`}
+        className={`w-full py-5 text-lg bg-orange-600 hover:bg-orange-700 shadow-lg border-2 border-orange-700 font-bold fixed bottom-4 left-0 right-0 max-w-xs mx-auto z-20 md:static md:max-w-md`}
       >
-        Continue
+        Continue <ArrowRight className="ml-1" />
       </Button>
     </div>
   );

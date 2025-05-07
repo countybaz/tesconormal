@@ -6,22 +6,34 @@ interface TimerProps {
 }
 
 const Timer = ({ minutes }: TimerProps) => {
-  const [timeLeft, setTimeLeft] = useState(minutes * 60);
+  const [timeLeft, setTimeLeft] = useState(() => {
+    // Try to get the saved timer value from sessionStorage
+    const savedTime = sessionStorage.getItem('timerValue');
+    if (savedTime) {
+      const parsedTime = parseInt(savedTime, 10);
+      // Validate the saved time to ensure it's sensible
+      if (!isNaN(parsedTime) && parsedTime > 0 && parsedTime <= minutes * 60) {
+        return parsedTime;
+      }
+    }
+    return minutes * 60; // Default to full time if no valid saved time
+  });
 
   useEffect(() => {
     if (timeLeft <= 0) return;
 
     const timerId = setInterval(() => {
       setTimeLeft(prev => {
-        // Don't go below 0
-        if (prev <= 1) {
-          return 0;
-        }
-        return prev - 1;
+        const newValue = prev <= 1 ? 0 : prev - 1;
+        // Save the current timer value to sessionStorage
+        sessionStorage.setItem('timerValue', newValue.toString());
+        return newValue;
       });
     }, 1000);
 
-    return () => clearInterval(timerId);
+    return () => {
+      clearInterval(timerId);
+    };
   }, [timeLeft]);
 
   const formatTime = (seconds: number) => {

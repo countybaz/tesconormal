@@ -4,9 +4,11 @@ import SurveyHeader from "@/components/SurveyHeader";
 import { useSurvey } from "@/contexts/SurveyContext";
 import { RefreshCw } from "lucide-react";
 import FAQ from "@/components/FAQ";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const RejectionPage = () => {
   const { goToStep } = useSurvey();
+  const isMobile = useIsMobile();
   
   const handleTryAgain = () => {
     goToStep(0); // Go to the start screen
@@ -47,10 +49,12 @@ const RejectionPage = () => {
 
       <Button 
         onClick={handleTryAgain} 
-        className="w-full bg-orange-600 hover:bg-orange-700 text-lg py-6"
+        className={`w-full bg-orange-600 hover:bg-orange-700 text-lg py-6 font-bold border-2 border-orange-700 shadow-lg ${isMobile ? 'fixed bottom-4 left-0 right-0 max-w-xs mx-auto' : ''} md:static md:max-w-md`}
       >
         Try Again <RefreshCw className="ml-2" size={20} />
       </Button>
+      
+      {isMobile && <div className="h-24"></div>}
     </div>
   );
 };

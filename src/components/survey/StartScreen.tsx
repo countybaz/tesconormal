@@ -36,9 +36,9 @@ const StartScreen = () => {
 
       <Button 
         onClick={handleStart} 
-        className={`w-full bg-orange-600 hover:bg-orange-700 text-lg py-6 shadow-lg fixed bottom-4 left-0 right-0 max-w-xs mx-auto md:static md:max-w-md z-20`}
+        className={`w-full bg-orange-600 hover:bg-orange-700 text-lg py-6 shadow-lg border-2 border-orange-700 font-bold fixed bottom-4 left-0 right-0 max-w-xs mx-auto md:static md:max-w-md z-20`}
       >
-        Start <ArrowRight className="ml-2" />
+        START NOW <ArrowRight className="ml-2" />
       </Button>
 
       {/* Facebook Review Section - kept in the start screen */}
