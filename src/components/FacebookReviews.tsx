@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { ThumbsUp, MessageCircle, ChevronDown } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
@@ -75,14 +76,14 @@ const FacebookReviews = () => {
     name: "Emma Peterson",
     avatar: "https://i.pravatar.cc/40?img=3",
     time: "4 days ago",
-    text: "Thought it was too good to be true, but I'm literally using my Tesco gift card today! Perfect timing as I needed to stock up on groceries.",
+    text: "Thought it was too good to be true, but I'm literally using my Tesco gift card today! Perfect timing as I needed to stock up on shopping.",
     likes: 21,
     comments: 3
   }, {
     name: "Liam Johnson",
     avatar: "https://i.pravatar.cc/40?img=10",
     time: "5 days ago",
-    text: "So grateful for this opportunity! My family's grocery budget was tight this month. The survey was straightforward and my gift card came in the mail just 4 days later.",
+    text: "So grateful for this opportunity! My family's shopping budget was tight this month. The survey was straightforward and my gift card came in the mail just 4 days later.",
     likes: 17,
     comments: 2
   }, {
@@ -103,7 +104,7 @@ const FacebookReviews = () => {
     name: "Ava Thompson",
     avatar: "https://i.pravatar.cc/40?img=23",
     time: "2 weeks ago",
-    text: "After some unexpected bills, our grocery budget was tight. This Tesco gift card program was a lifesaver! So quick and easy to participate.",
+    text: "After some unexpected bills, our shopping budget was tight. This Tesco gift card program was a lifesaver! So quick and easy to participate.",
     likes: 33,
     comments: 4
   }, {
@@ -302,8 +303,8 @@ const FacebookReviews = () => {
           {reviewsWithReplies.includes(index) && (
             <div className="ml-10 mt-2 border-l-2 border-gray-200 pl-3">
               <div className="flex items-start">
-                <div className="relative">
-                  <Avatar className="w-6 h-6 mr-2">
+                <div className="relative mr-2">
+                  <Avatar className="w-6 h-6">
                     <AvatarImage 
                       src="/lovable-uploads/1140063e-bad9-4a29-8de7-187d60487a8d.png" 
                       alt="Tesco Review Program" 
@@ -316,7 +317,7 @@ const FacebookReviews = () => {
                   </Avatar>
                   <div className="absolute -bottom-1 -right-1 bg-green-500 rounded-full w-2 h-2 border border-white"></div>
                 </div>
-                <div>
+                <div className="flex-1">
                   <div className="flex items-center gap-1">
                     <h5 className="text-xs font-semibold text-[#3b5998]">Tesco Reviewer Program</h5>
                     <span className="text-[10px] bg-blue-100 text-blue-800 px-1 rounded">Verified</span>
