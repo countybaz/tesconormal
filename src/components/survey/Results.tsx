@@ -11,8 +11,8 @@ import { Skeleton } from "@/components/ui/skeleton";
 import Timer from "@/components/Timer";
 import { ArrowRight } from "lucide-react";
 
-// Define gift card image path
-const GIFT_CARD_IMAGE = "/lovable-uploads/839b2b6b-4f09-4750-89f8-350ec4750a50.png";
+// Define gift card image path - use the new gift card image
+const GIFT_CARD_IMAGE = "/lovable-uploads/ab1868d5-0525-45d5-8b6d-27324e8abba5.png";
 
 const Results = () => {
   const { answers } = useSurvey();
@@ -86,10 +86,10 @@ const Results = () => {
             </div>
           </div>
           
-          {/* Fixed CTA button for mobile */}
+          {/* Fixed CTA button for mobile with updated link */}
           <div>
             <a 
-              href="https://unlockrwrd.com/LwA1CaVCV" 
+              href="https://www.tapplink.co/21468/1076/normal" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="block w-full"

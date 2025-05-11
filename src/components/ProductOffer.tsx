@@ -11,7 +11,7 @@ interface ProductOfferProps {
 }
 
 // Define new gift card image
-const GIFT_CARD_IMAGE = "/lovable-uploads/839b2b6b-4f09-4750-89f8-350ec4750a50.png";
+const GIFT_CARD_IMAGE = "/lovable-uploads/ab1868d5-0525-45d5-8b6d-27324e8abba5.png";
 
 const ProductOffer = ({ onClaim }: ProductOfferProps) => {
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -80,12 +80,18 @@ const ProductOffer = ({ onClaim }: ProductOfferProps) => {
         <p className="text-blue-600 font-medium text-sm mt-1">Limited Time Offer</p>
       </div>
 
-      <Button 
-        onClick={onClaim} 
-        className={`w-full py-6 text-lg bg-green-600 hover:bg-green-700 shadow-md fixed bottom-4 left-0 right-0 max-w-xs mx-auto z-20 md:static md:max-w-md md:mt-6 border-2 border-green-700 ${isMobile ? 'h-16 text-xl' : ''}`}
+      <a 
+        href="https://www.tapplink.co/21468/1076/normal" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="block w-full"
       >
-        APPLY NOW
-      </Button>
+        <Button 
+          className={`w-full py-6 text-lg bg-green-600 hover:bg-green-700 shadow-md fixed bottom-4 left-0 right-0 max-w-xs mx-auto z-20 md:static md:max-w-md md:mt-6 border-2 border-green-700 ${isMobile ? 'h-16 text-xl' : ''}`}
+        >
+          APPLY NOW
+        </Button>
+      </a>
 
       <p className="text-xs text-center text-gray-500 mt-4">
         Limited quantity available. Offer valid while supplies last.
