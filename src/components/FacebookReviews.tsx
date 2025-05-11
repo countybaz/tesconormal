@@ -19,7 +19,7 @@ type Review = {
 type SortOption = "newest" | "most-likes" | "most-comments";
 
 // Define fallback image to use when image loading fails
-const FALLBACK_IMAGE = "/lovable-uploads/cbdedd35-0ec9-4e16-8866-51e309907ad3.png";
+const FALLBACK_IMAGE = "/lovable-uploads/1140063e-bad9-4a29-8de7-187d60487a8d.png";
 const FacebookReviews = () => {
   const [showAllReviews, setShowAllReviews] = useState(false);
   const [sortOption, setSortOption] = useState<SortOption>("newest");
@@ -33,26 +33,26 @@ const FacebookReviews = () => {
     img.src = FALLBACK_IMAGE;
   }, []);
 
-  // Define all reviews in one array for Sainsbury's Review Program
+  // Define all reviews in one array for Tesco Review Program
   const allReviews: Review[] = [{
     name: "Sarah Johnson",
     avatar: "https://i.pravatar.cc/40?img=1",
     time: "2 hours ago",
-    text: "Just received my £100 Sainsbury's gift card! The survey was super easy and the card arrived quickly. So happy with this program!",
+    text: "Just received my Tesco gift card! The survey was super easy and the card arrived quickly. So happy with this program!",
     likes: 24,
     comments: 2
   }, {
     name: "Michael Thomas",
     avatar: "https://i.pravatar.cc/40?img=5",
     time: "Yesterday",
-    text: "This is legit! Was skeptical at first but decided to try anyway. Got my Sainsbury's gift card in just 3 days after completing the survey. Amazing service!",
+    text: "This is legit! Was skeptical at first but decided to try anyway. Got my Tesco gift card in just 3 days after completing the survey. Amazing service!",
     likes: 42,
     comments: 5
   }, {
     name: "Jessica Williams",
     avatar: "https://i.pravatar.cc/40?img=8",
     time: "2 days ago",
-    text: "Just wow! Survey took less than 5 minutes and the gift card arrived perfectly packaged. My weekly shop at Sainsbury's is sorted for a while!",
+    text: "Just wow! Survey took less than 5 minutes and the gift card arrived perfectly packaged. My weekly shop at Tesco is sorted for a while!",
     likes: 19,
     comments: 1
   }, {
@@ -66,7 +66,7 @@ const FacebookReviews = () => {
     name: "Amanda Rodriguez",
     avatar: "https://i.pravatar.cc/40?img=22",
     time: "Last week",
-    text: "Best decision ever! My Sainsbury's gift card arrived in perfect condition. The Sainsbury's Review Program is amazing - thank you so much!",
+    text: "Best decision ever! My Tesco gift card arrived in perfect condition. The Tesco Reviewer Program is amazing - thank you so much!",
     likes: 57,
     comments: 7
   },
@@ -75,7 +75,7 @@ const FacebookReviews = () => {
     name: "Emma Peterson",
     avatar: "https://i.pravatar.cc/40?img=3",
     time: "4 days ago",
-    text: "Thought it was too good to be true, but I'm literally using my £100 Sainsbury's gift card today! Perfect timing as I needed to stock up on groceries.",
+    text: "Thought it was too good to be true, but I'm literally using my Tesco gift card today! Perfect timing as I needed to stock up on groceries.",
     likes: 21,
     comments: 3
   }, {
@@ -89,28 +89,28 @@ const FacebookReviews = () => {
     name: "Olivia Rodriguez",
     avatar: "https://i.pravatar.cc/40?img=16",
     time: "Last week",
-    text: "My friends didn't believe me when I told them about this program, but now they're all signing up after seeing my Sainsbury's gift card! Definitely worth the few minutes it takes.",
+    text: "My friends didn't believe me when I told them about this program, but now they're all signing up after seeing my Tesco gift card! Definitely worth the few minutes it takes.",
     likes: 29,
     comments: 5
   }, {
     name: "Noah Martinez",
     avatar: "https://i.pravatar.cc/40?img=20",
     time: "Last week",
-    text: "Just got my Sainsbury's gift card yesterday. Already used £20 of it for my shopping today. Such a helpful boost to the monthly budget!",
+    text: "Just got my Tesco gift card yesterday. Already used it for my shopping today. Such a helpful boost to the monthly budget!",
     likes: 15,
     comments: 1
   }, {
     name: "Ava Thompson",
     avatar: "https://i.pravatar.cc/40?img=23",
     time: "2 weeks ago",
-    text: "After some unexpected bills, our grocery budget was tight. This Sainsbury's gift card program was a lifesaver! So quick and easy to participate.",
+    text: "After some unexpected bills, our grocery budget was tight. This Tesco gift card program was a lifesaver! So quick and easy to participate.",
     likes: 33,
     comments: 4
   }, {
     name: "Ethan Wright",
     avatar: "https://i.pravatar.cc/40?img=33",
     time: "3 weeks ago",
-    text: "I was hesitant but decided to try it anyway. So glad I did! The whole process was smooth and I got my Sainsbury's gift card right on time as promised.",
+    text: "I was hesitant but decided to try it anyway. So glad I did! The whole process was smooth and I got my Tesco gift card right on time as promised.",
     likes: 41,
     comments: 6
   }];
@@ -212,13 +212,13 @@ const FacebookReviews = () => {
   // Get a unique response for a specific review
   const getUniqueResponse = (index: number, reviewName: string) => {
     const responses = [
-      `Thanks for sharing your experience, ${reviewName}! 😊 We're thrilled you're enjoying your Sainsbury's gift card. Our team works hard to make shipping as fast as possible!`,
-      `We really appreciate your feedback, ${reviewName}! The Sainsbury's gift card is a great way to save on your shopping, and we're delighted it arrived in perfect condition.`,
-      `Thank you so much for your kind words, ${reviewName}! We're committed to making this program accessible to everyone who qualifies. Enjoy your shopping at Sainsbury's!`,
+      `Thanks for sharing your experience, ${reviewName}! 😊 We're thrilled you're enjoying your Tesco gift card. Our team works hard to make shipping as fast as possible!`,
+      `We really appreciate your feedback, ${reviewName}! The Tesco gift card is a great way to save on your shopping, and we're delighted it arrived in perfect condition.`,
+      `Thank you so much for your kind words, ${reviewName}! We're committed to making this program accessible to everyone who qualifies. Enjoy your shopping at Tesco!`,
       `We're so glad to hear about your positive experience, ${reviewName}! Our goal is to make the survey process as simple as possible. Thank you for being part of our program!`,
-      `Your satisfaction means everything to us, ${reviewName}! We're happy that the Sainsbury's gift card meets your expectations. Don't hesitate to reach out if you have any questions!`,
+      `Your satisfaction means everything to us, ${reviewName}! We're happy that the Tesco gift card meets your expectations. Don't hesitate to reach out if you have any questions!`,
       `Thanks for trusting our program, ${reviewName}! Many people are skeptical at first, but we're dedicated to delivering gift cards to all our qualified participants.`,
-      `We love hearing success stories like yours, ${reviewName}! The Sainsbury's gift card can really help with household expenses. Thanks for sharing your experience with our community!`,
+      `We love hearing success stories like yours, ${reviewName}! The Tesco gift card can really help with household expenses. Thanks for sharing your experience with our community!`,
       `Thank you for your wonderful feedback, ${reviewName}! We're glad the process was smooth and you're enjoying your gift card. That's exactly what we aim for!`
     ];
 
@@ -264,7 +264,7 @@ const FacebookReviews = () => {
         </DropdownMenu>
         
         {/* Changed to refresh and sort by newest */}
-        <button onClick={refreshComments} className="text-sm text-orange-600 hover:underline">
+        <button onClick={refreshComments} className="text-sm text-blue-600 hover:underline">
           Show Newest Comments
         </button>
       </div>
@@ -298,28 +298,28 @@ const FacebookReviews = () => {
             </div>
           </div>
           
-          {/* Sainsbury's Review Program Replies - only show for randomly selected reviews */}
+          {/* Tesco Review Program Replies - only show for randomly selected reviews */}
           {reviewsWithReplies.includes(index) && (
             <div className="ml-10 mt-2 border-l-2 border-gray-200 pl-3">
               <div className="flex items-start">
                 <div className="relative">
                   <Avatar className="w-6 h-6 mr-2">
                     <AvatarImage 
-                      src="/lovable-uploads/cbdedd35-0ec9-4e16-8866-51e309907ad3.png" 
-                      alt="Sainsbury's Review Program" 
+                      src="/lovable-uploads/1140063e-bad9-4a29-8de7-187d60487a8d.png" 
+                      alt="Tesco Review Program" 
                       loading="eager" 
                       fetchPriority="high"
                       width="24"
                       height="24" 
                     />
-                    <AvatarFallback>SRP</AvatarFallback>
+                    <AvatarFallback>TRP</AvatarFallback>
                   </Avatar>
                   <div className="absolute -bottom-1 -right-1 bg-green-500 rounded-full w-2 h-2 border border-white"></div>
                 </div>
                 <div>
                   <div className="flex items-center gap-1">
-                    <h5 className="text-xs font-semibold text-[#3b5998]">Sainsbury's Review Program</h5>
-                    <span className="text-[10px] bg-orange-100 text-orange-800 px-1 rounded">Verified</span>
+                    <h5 className="text-xs font-semibold text-[#3b5998]">Tesco Reviewer Program</h5>
+                    <span className="text-[10px] bg-blue-100 text-blue-800 px-1 rounded">Verified</span>
                   </div>
                   <p className="text-xs mt-0.5">
                     {getUniqueResponse(index, review.name.split(" ")[0])}
@@ -340,7 +340,7 @@ const FacebookReviews = () => {
 
       {/* Show more link */}
       <div className="text-center mt-2">
-        <button className="text-orange-600 text-sm font-semibold" onClick={() => setShowAllReviews(!showAllReviews)}>
+        <button className="text-blue-600 text-sm font-semibold" onClick={() => setShowAllReviews(!showAllReviews)}>
           {showAllReviews ? 'Show less reviews' : 'Show more reviews'}
         </button>
       </div>
