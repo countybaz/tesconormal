@@ -70,7 +70,7 @@ const HeaderContent = () => {
         width="100" 
         height="100"
         loading="eager"
-        fetchpriority="high"
+        fetchPriority="high"
       />
       <h1 className="text-xl font-bold text-orange-600">Sainsbury's Review Program</h1>
       <div className="ml-4">
