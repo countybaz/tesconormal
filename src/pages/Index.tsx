@@ -67,10 +67,10 @@ const HeaderContent = () => {
         src="/lovable-uploads/cbdedd35-0ec9-4e16-8866-51e309907ad3.png" 
         alt="Sainsbury's Review Program Logo" 
         className="h-20 w-auto min-w-[80px] md:h-24"
-        width="100"
+        width="100" 
         height="100"
         loading="eager"
-        fetchPriority="high"
+        fetchpriority="high"
       />
       <h1 className="text-xl font-bold text-orange-600">Sainsbury's Review Program</h1>
       <div className="ml-4">
