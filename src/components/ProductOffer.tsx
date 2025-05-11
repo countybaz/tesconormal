@@ -10,23 +10,23 @@ interface ProductOfferProps {
   onClaim: () => void;
 }
 
-// Define new gift card image
-const GIFT_CARD_IMAGE = "/lovable-uploads/ab1868d5-0525-45d5-8b6d-27324e8abba5.png";
+// Define new gift card image - updated to the new uploaded image
+const GIFT_CARD_IMAGE = "/lovable-uploads/16e084ba-e53a-41a6-a332-e073d3aa24f5.png";
 
 const ProductOffer = ({ onClaim }: ProductOfferProps) => {
   const [imageLoaded, setImageLoaded] = useState(false);
   const isMobile = useIsMobile();
   
-  // Preload image immediately
+  // Preload image immediately with faster timeout
   useEffect(() => {
     const img = new Image();
     img.onload = () => setImageLoaded(true);
     img.src = GIFT_CARD_IMAGE;
     
-    // Set a shorter timeout for faster initial render
+    // Set an even shorter timeout for faster initial render
     const timeout = setTimeout(() => {
       setImageLoaded(true);
-    }, 500); 
+    }, 150); // Reduced from 500ms to 150ms
     
     return () => clearTimeout(timeout);
   }, []);

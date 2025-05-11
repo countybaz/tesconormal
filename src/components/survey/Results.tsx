@@ -11,8 +11,8 @@ import { Skeleton } from "@/components/ui/skeleton";
 import Timer from "@/components/Timer";
 import { ArrowRight } from "lucide-react";
 
-// Define gift card image path - use the new gift card image
-const GIFT_CARD_IMAGE = "/lovable-uploads/ab1868d5-0525-45d5-8b6d-27324e8abba5.png";
+// Define gift card image path - update to the newly uploaded image
+const GIFT_CARD_IMAGE = "/lovable-uploads/16e084ba-e53a-41a6-a332-e073d3aa24f5.png";
 
 const Results = () => {
   const { answers } = useSurvey();
@@ -30,7 +30,7 @@ const Results = () => {
     // Ultra-fast timeout for immediate display even if image is still loading
     const timeout = setTimeout(() => {
       setImageLoaded(true);
-    }, 300);
+    }, 150); // Reduced from 300ms to 150ms for even faster loading
     
     return () => clearTimeout(timeout);
   }, []);
